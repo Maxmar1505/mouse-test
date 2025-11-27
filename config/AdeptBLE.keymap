@@ -53,7 +53,7 @@
     default_layer {
       display-name = "Default";
       bindings = <
-        &ltm BLTH MB4 &ltm DEVICE MB5 &mkp MCLK &lth SCRLM RCLK
+        &ltm BLTH MB4 &ltm DEVICE MB5 &lth VOL MCLK &lth SCRLM RCLK
         &mkp LCLK                               &mto SCRLM SNIPE
       >;
     };
@@ -95,7 +95,7 @@
     vol_layer {
       display-name = "Volume";
       bindings = <
-        &trans &trans &to DEFAULT &trans
+        &trans &trans &trans &trans
         &trans               &trans
       >;
     };
