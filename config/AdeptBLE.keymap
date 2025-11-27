@@ -95,7 +95,7 @@
     vol_layer {
       display-name = "Volume";
       bindings = <
-        &trans &trans &trans &trans
+        &trans &trans &to DEFAULT &trans
         &trans               &trans
       >;
     };
