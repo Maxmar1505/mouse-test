@@ -150,7 +150,10 @@
     };
     vol {
         layers = <VOL>;
-        input-processors = <&zip_xy_swap_mapper>, <&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)>, <&zip_xy_scaler 1 10>, <&zip_xy_to_scroll_mapper>;
+        input-processors = <&zip_xy_swap_mapper>, <&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)>, <&zip_xy_scaler 1 5>;
+        ZMK_KEYMAP_POINTING_BUTTON_Y ZMK_KEYMAP_POINTING_BUTTON_X
+        <&kp VOL_UP> <&kp VOL_DN>
+        <&trans> <&trans>
     };
     snipe {
         layers = <SNIPE>;
