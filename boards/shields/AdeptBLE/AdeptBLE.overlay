@@ -151,7 +151,6 @@
     vol {
         layers = <VOL>;
         input-processors = <&zip_xy_swap_mapper>, <&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)>, <&zip_xy_scaler 1 5>;
-        compatible = "zmk,input-processor-code-mapper";
         process-next;
     };
     snipe {
