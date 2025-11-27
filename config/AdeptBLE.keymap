@@ -12,6 +12,7 @@
 #define DEVICE 3
 #define BLTH 4
 #define SNIPE 5
+#define VOL 6
 
 / {
   combos {
@@ -89,6 +90,13 @@
       bindings = <
         &trans &trans &trans &lth SCRLM RCLK
         &trans               &to DEFAULT
+      >;
+    };
+    vol_layer {
+      display-name = "Volume";
+      bindings = <
+        &trans &trans &trans &trans
+        &trans               &trans
       >;
     };
   };
