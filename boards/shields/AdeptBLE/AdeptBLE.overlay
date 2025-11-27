@@ -3,7 +3,6 @@
 #include <dt-bindings/zmk/matrix_transform.h>
 #include <physical_layouts.dtsi>
 #include <zephyr/dt-bindings/input/input-event-codes.h>
-#include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/keys.h>
 
 // layers
@@ -154,7 +153,7 @@
         layers = <VOL>;
         input-processors = <&zip_xy_swap_mapper>, <&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)>, <&zip_xy_scaler 1 5>;
         bindings-processor = <&zip_xy_to_key_mapper
-            ZMK_KEYMAP_POINTING_BUTTON_Y ZMK_KEYMAP_POINTING_BUTTON_X
+            2 1
             <&kp VOL_UP> <&kp VOL_DN>
             <&trans> <&trans>
         >;
