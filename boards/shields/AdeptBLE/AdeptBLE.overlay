@@ -137,7 +137,7 @@
   trackball_listener: trackball_listener {
     compatible = "zmk,input-listener";
     device = <&trackball>;
-    input-processors = <&zip_xy_swap_mapper>, <&zip_xy_scaler 1 10>;
+    input-processors = <&zip_xy_swap_mapper>, <&zip_xy_scaler 1 5>;
 
     default {
         layers = <DEFAULT>;
