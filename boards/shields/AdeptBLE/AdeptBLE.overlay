@@ -153,18 +153,22 @@
         input-processors = <&zip_xy_scaler 1 5>;
         process-next;
     };
-    sensor_rotate_vol: sensor_rotate_vol {
-        compatible = "zmk,behavior-sensor-rotate";
-        #sensor-binding-cells = <0>;
-        bindings = <&kp B>, <&kp A>;
-        tap-ms = <10>;
-    };
-    vol {
-        compatible = "zmk,input-listener";
-        device = <&sensor_rotate_vol>;
-        input-processors = <&zip_xy_swap_mapper>, <&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)>, <&zip_xy_scaler 1 30>;
-        layers = <VOL>;
-        process-next;
-    };
+  };
+};
+
+/ {
+  sensor_rotate_vol: sensor_rotate_vol {
+    compatible = "zmk,behavior-sensor-rotate";
+    #sensor-binding-cells = <0>;
+    bindings = <&kp B>, <&kp A>;
+    tap-ms = <10>;
+  };
+
+  vol {
+    compatible = "zmk,input-listener";
+    device = <&trackball>;
+    input-processors = <&zip_xy_swap_mapper>, <&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)>, <&zip_xy_scaler 1 30>;
+    layers = <VOL>;
+    process-next;
   };
 };
