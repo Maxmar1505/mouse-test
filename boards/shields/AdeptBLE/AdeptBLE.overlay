@@ -155,20 +155,3 @@
     };
   };
 };
-
-/ {
-  sensor_rotate_vol: sensor_rotate_vol {
-    compatible = "zmk,behavior-sensor-rotate";
-    #sensor-binding-cells = <0>;
-    bindings = <&kp C_VOL_UP>, <&kp C_VOL_DN>;
-    tap-ms = <10>;
-  };
-
-  vol_listener: vol_listener {
-    compatible = "zmk,input-listener";
-    device = <&trackball>;
-    input-processors = <&zip_xy_scaler 1 30>, <&sensor_rotate_vol>;
-    layers = <VOL>;
-    process-next;
-  };
-};
